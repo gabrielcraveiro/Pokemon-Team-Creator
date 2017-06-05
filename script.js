@@ -14,7 +14,7 @@ $('form').on('submit', function (e) {
 	types = types.split(',');
 
 	let trainerTypeCalls = types.map(elem => {
-		return fetch(`http://pokeapi.co/api/v2/type/${elem}/`, fetchOption)
+		return fetch(`https://pokeapi.co/api/v2/type/${elem}/`, fetchOption)
 	});
 
 	getPromiseData(trainerTypeCalls)
