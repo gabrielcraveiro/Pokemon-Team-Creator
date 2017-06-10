@@ -23,6 +23,11 @@ $('form').on('submit', function (e) {
 			getDoubleDamagePokemon(result);
 		});
 
+	let p = document.createElement('p');
+	p.innerHTML = "Aguarde um instante <br>";
+	p.className = 'deletar';
+	document.querySelector('.poke-container').appendChild(p);
+
 });
 
 function getDoubleDamagePokemon(pokemonTypes) {
@@ -41,6 +46,7 @@ function getDoubleDamagePokemon(pokemonTypes) {
 			console.log(results);
 			buildTeam(results);
 		});
+
 
 }
 
@@ -64,6 +70,9 @@ function buildTeam(pokemons) {
 		.then(pokemonData => {
 			displayPokemon(pokemonData);
 		});
+
+	document.querySelector('.deletar').innerHTML = '';
+
 }
 
 function getRandomPokemon(pokemonArray) {
