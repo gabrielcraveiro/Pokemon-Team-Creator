@@ -9,6 +9,7 @@ const fetchOption = {
 
 $('form').on('submit', function (e) {
 	e.preventDefault();
+	document.querySelector('.poke-container').innerHTML = '';
 
 	let types = $('input[type=text]').val().replace(/\s/g, '');
 	types = types.split(',');
