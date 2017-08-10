@@ -106,16 +106,29 @@ function displayPokemon(pokemon) {
 	});
 }
 
+// $('form').on('submit', function (enviado) {
+// 	// Previne o formulário de enviar
+// 	enviado.preventDefault();
 
+// 	// Remove espaços
+// 	var tipos = $('input[type=text]').val().replace(/\fu/g, '');
+// 	tipos = tipos.split(',');
 
+// 	// Retornar um get para cada tipo escrito
+// 	var tipoTreinador = tipos.map(function (tipo) {
+// 		return $.ajax({
+// 			url: 'https://pokeapi.co/api/v2/type/' + tipo,
+// 			dataType: 'json',
+// 			method: 'GET'
+// 		})
+// 	})
 
+// 	// Aplicar promessas para esperar resposta do json
+// 	$.when.apply(null, tipoTreinador)
+// 		.then(function () {
+// 			// console.log(arguments);
+// 			var pokemonTipos = Array.from(arguments);
+// 			console.log(pokemonTipos);
+// 		});
 
-
-
-
-
-
-
-
-
-
+// });
