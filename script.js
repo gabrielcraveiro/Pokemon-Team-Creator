@@ -21,7 +21,7 @@ $('form').on('submit', function (e) {
 	getPromiseData(trainerTypeCalls)
 		.then(result => {
 			console.log(result);
-			getDoubleDamagePokemon(result);
+			buildTeam(result);			
 		});
 
 	let p = document.createElement('p');
